@@ -107,3 +107,12 @@ for (let i = 1; i < totalCount; i++) {
     navBar.appendChild(navElement);
 }
 
+
+
+const myPage = document.querySelector('main');
+
+function respondToTheClick() {
+    console.log('A section was clicked.');
+}
+
+myPage.addEventListener('click', respondToTheClick);
