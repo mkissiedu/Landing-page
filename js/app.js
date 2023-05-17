@@ -107,12 +107,15 @@ for (let i = 1; i < totalCount; i++) {
     navBar.appendChild(navElement);
 }
 
+const firstSection = document.getElementById('section1');
+const secondSection = document.getElementById('section2');
+const thirdSection = document.getElementById('section3');
+const fourthSection = document.getElementById('section4');
 
 
-const myPage = document.querySelector('main');
+function respondToScrolling() {
+    //firstSection.style.backgroundColor = white;
 
-function respondToTheClick() {
-    console.log('A section was clicked.');
 }
 
-myPage.addEventListener('click', respondToTheClick);
+mainDocument.addEventListener('mouseover', respondToScrolling);
