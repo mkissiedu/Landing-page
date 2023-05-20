@@ -17,8 +17,6 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
-
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
@@ -114,10 +112,6 @@ section {
 .landing__container {
     padding: 1em;
     text-align: left;
-}
-
-.your-active-class {
-    background-color: red;
 }
 @media only screen and (min-width: 35em){
     .landing__container {

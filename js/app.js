@@ -115,6 +115,8 @@ const fourthSection = document.getElementById('section4');
 
 function respondToScrolling() {
     //firstSection.style.backgroundColor = white;
+    secondSection.className = "your-active-class";
+    console.log("scroll recognized");
 
 }
 
