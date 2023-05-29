@@ -106,18 +106,3 @@ for (let i = 1; i < totalCount; i++) {
     navElement.innerHTML = `<li class = "menu__link"> <a href="#section${i}">Section${i}</a></li>`;
     navBar.appendChild(navElement);
 }
-
-const firstSection = document.getElementById('section1');
-const secondSection = document.getElementById('section2');
-const thirdSection = document.getElementById('section3');
-const fourthSection = document.getElementById('section4');
-
-
-function respondToScrolling() {
-    //firstSection.style.backgroundColor = white;
-    secondSection.className = "your-active-class";
-    console.log("scroll recognized");
-
-}
-
-mainDocument.addEventListener('mouseover', respondToScrolling);
