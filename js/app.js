@@ -22,52 +22,14 @@
  * Define Global Variables
  * 
 */
-
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-
 const myFirstSection = document.querySelector('#section1');
 const mySecondSection = document.querySelector('#section2');
 const myThirdSection = document.querySelector('#section3');
 const myFourthSection = document.createElement('section');
-
 const mainDocument = document.querySelector('main');
 const navBar = document.querySelector('#navbar__list');
 
+// Build menu 
 myFirstSection.innerHTML = `<div class="landing__container">
 <h2>Section 1</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
@@ -98,6 +60,8 @@ myFourthSection.innerHTML = `<section id="section4" data-nav="Section 4">
 
 
 mainDocument.appendChild(myFourthSection);
+
+// build the nav
 const allSections = document.querySelectorAll('section');
 const totalCount = allSections.length;
 
