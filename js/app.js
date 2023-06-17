@@ -72,7 +72,7 @@ for (let i = 1; i < totalCount; i++) {
 //add eventlistener on the navbar
 const navSection = document.querySelectorAll("a");
 for (let y = 0; y < navSection.length; y++) {
-  navSection[y].addEventListener("click", (e) => {
+    navSection[y].addEventListener("click", function(e) {
     e.preventDefault();
     const element = document.getElementById(`section${y + 1}`);
     element.scrollIntoView({ behavior: "smooth", block: "center" }); // scroll to the element, with smooth scrolling
