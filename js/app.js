@@ -65,7 +65,7 @@ for (let i = 1; i < totalCount; i++) {
   const navElement = document.createElement('li');
   navElement.innerHTML = `<li class = "menu__link" id ="Section ${i}"> <a href="#section${i}">Section ${i}</a></li>`;
   navBar.appendChild(navElement);
-};
+}
 //add eventlistener on the navbar
 const navSection = document.querySelectorAll("a");
 for (let y = 0; y < navSection.length; y++) {
@@ -74,7 +74,7 @@ for (let y = 0; y < navSection.length; y++) {
     const element = document.getElementById(`section${y + 1}`);
     element.scrollIntoView({ behavior: "smooth", block: "center" }); // scroll to the element, with smooth scrolling
   });
-};
+}
 
 // Add class 'active' to section when it is near top of viewport
 function makeActive() {
@@ -88,7 +88,7 @@ function makeActive() {
         // Remove active state from other section and corresponding Nav link.
         section.className = "";
       }
-  };
+  }
 }
 
 // Make sections active
