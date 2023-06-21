@@ -63,11 +63,12 @@ const allSections = document.querySelectorAll("section");
 const totalCount = allSections.length;
 for (let i = 1; i < totalCount; i++) {
   const navElement = document.createElement('li');
-  navElement.innerHTML = `<li class = "menu__link" id ="Section ${i}"> <a href="#section${i}">Section ${i}</a></li>`;
+  navElement.innerHTML = `<li class = "menu__link" id ="section ${i}"> <a href="#section${i}">Section ${i}</a></li>`;
   navBar.appendChild(navElement);
 }
 //add eventlistener on the navbar
 const navSection = document.querySelectorAll("a");
+console.log('This is the nav section'+ navSection);
 for (let y = 0; y < navSection.length; y++) {
     navSection[y].addEventListener("click", function(e) {
     e.preventDefault();
@@ -79,14 +80,20 @@ for (let y = 0; y < navSection.length; y++) {
 // Add class 'active' to section when it is near top of viewport
 function makeActive() {
   for (const section of allSections) {
+      console.log("This is the value for each section:" + section);
       const box = section.getBoundingClientRect();
       // You can play with the values in the "if" condition to further make it more accurate.
       if (box.top <= 150 && box.bottom >= 150) {
-        // Apply active state on the current section and the corresponding Nav link.
-        section.className = "your-active-class";
+      // Apply active state on the current section and the corresponding Nav link.
+      section.className = "your-active-class";
+      const currentNavElement = document.getElementById(`${section.id}`);
+      console.log("This is the value for section.id:" + section.id);
+      console.log("This is the value for currentNavElement:" + currentNavElement);
+      currentNavElement.className = "active";
       } else {
         // Remove active state from other section and corresponding Nav link.
         section.className = "";
+        //currentNavElement.className = "";
       }
   }
 }
