@@ -80,20 +80,16 @@ for (let y = 0; y < navSection.length; y++) {
 // Add class 'active' to section when it is near top of viewport
 function makeActive() {
   for (const section of allSections) {
-      console.log("This is the value for each section:" + section);
       const box = section.getBoundingClientRect();
       // You can play with the values in the "if" condition to further make it more accurate.
       if (box.top <= 150 && box.bottom >= 150) {
       // Apply active state on the current section and the corresponding Nav link.
       section.className = "your-active-class";
-      const currentNavElement = document.getElementById(`${section.id}`);
-      console.log("This is the value for section.id:" + section.id);
-      console.log("This is the value for currentNavElement:" + currentNavElement);
-      currentNavElement.className = "active";
+      navBar.querySelector(`a[href="#${section.id}"]`).classList.add("active");
       } else {
         // Remove active state from other section and corresponding Nav link.
         section.className = "";
-        //currentNavElement.className = "";
+        navBar.querySelector(`a[href="#${section.id}"]`).classList.remove("active");
       }
   }
 }
