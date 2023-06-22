@@ -97,7 +97,6 @@ function makeActive() {
 // Make sections active
 document.addEventListener("scroll", function () {
   makeActive();
-  console.log("The scroll function to make active is called");
 });
 
 //Reference the below site to look up how to create smooth scrolling and also used the assistance of the tutors.
