@@ -84,11 +84,11 @@ function makeActive() {
       // You can play with the values in the "if" condition to further make it more accurate.
       if (box.top <= 150 && box.bottom >= 150) {
       // Apply active state on the current section and the corresponding Nav link.
-      section.className = "your-active-class";
+      section.classList.add("your-active-class");
       navBar.querySelector(`a[href="#${section.id}"]`).classList.add("active");
       } else {
         // Remove active state from other section and corresponding Nav link.
-        section.className = "";
+        section.classList.remove("your-active-class");
         navBar.querySelector(`a[href="#${section.id}"]`).classList.remove("active");
       }
   }
